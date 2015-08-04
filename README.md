@@ -47,7 +47,7 @@ chmod a+rw ~/dist
 
 Then start the container using the special `build` syntax:
 ```
-docker run --rm --volume ~/dist:/dist droboports/go-compiler build project-name
+docker run --rm --volume ~/dist:/dist droboports/python-compiler build project-name
 ```
 
 Once the build is done, `~/dist` will contain `project-name.tgz`. If no `tgz` or `egg` was produced, the docker container will start a bash shell.
