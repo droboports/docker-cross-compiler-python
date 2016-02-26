@@ -2,11 +2,6 @@ FROM droboports/compiler
 
 MAINTAINER ricardo@droboports.com
 
-COPY packages.txt /packages.txt
-
-RUN set -x; \
-    apt-get -y install $(cat /packages.txt)
-
 ENV PYTHON_VERSION 2.7.10
 
 RUN set -x; \
