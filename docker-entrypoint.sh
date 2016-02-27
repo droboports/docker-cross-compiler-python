@@ -3,6 +3,12 @@
 set -o errexit
 set -o nounset
 
+if [ -n "${WITH_BINFMT:-}" ]; then
+  sudo /bin/mount -t binfmt_misc binfmt_misc /proc/sys/fs/binfmt_misc || true
+  sudo /usr/sbin/update-binfmts --enable qemu-arm || true
+  update-binfmts --display | grep qemu-arm
+fi
+
 if [ "${1:-}" = "build" ]; then
   set -o xtrace
   shift
