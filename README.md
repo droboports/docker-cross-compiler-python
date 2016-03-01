@@ -1,4 +1,6 @@
-# docker-cross-compiler
+# docker-cross-compiler-python
+
+WARNING: Ths container has been deprecated in favor of a single all-purpose Drobo cross-compiler environment here: [Github](https://github.com/droboports/docker-cross-compiler) or [Docker Hub](https://registry.hub.docker.com/u/droboports/compiler/).
 
 ## Pull the container
 
